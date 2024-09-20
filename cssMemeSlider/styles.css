@@ -1,0 +1,106 @@
+:root {
+  --color-primary: #83a3f9;
+  --color-background: #000000;
+  --color-dot: #bbb;
+  --color-dot-hover: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: var(--color-primary);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  background-color: var(--color-background);
+}
+.container {
+  width: 100%;
+  max-width: 60vw;
+  overflow: hidden;
+}
+
+/* SLIDER */
+.slider {
+  padding-top: 6vh;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  transition: 0.5s;
+}
+.slide p {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-top: 1.5rem;
+}
+.slide img {
+  width: 100%;
+  border-radius: 2.5rem;
+}
+
+/* NAVIGATION */
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+.dot-wrapper {
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+}
+.dot {
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--color-dot);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot.active {
+  background-color: transparent;
+  border: 0.5rem solid var(--color-primary);
+}
+.dot:hover {
+  background-color: var(--color-dot-hover);
+}
+
+
+/* ADAPTIVITY */
+@media (max-width: 768px) {
+  .container {
+    max-width: 70%;
+  }
+  .slide p {
+    font-size: 1.8rem;
+  }
+  .dot-wrapper {
+    padding: 0.8rem;
+  }
+  .dot {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 90%;
+  }
+  .slide p {
+    font-size: 1.6rem;
+  }
+  .dot-wrapper {
+    padding: 0.6rem;
+  }
+  .dot {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
