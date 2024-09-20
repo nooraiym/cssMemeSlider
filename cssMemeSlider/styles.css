@@ -70,3 +70,37 @@ body {
 .dot:hover {
   background-color: var(--color-dot-hover);
 }
+
+
+/* ADAPTIVITY */
+@media (max-width: 768px) {
+  .container {
+    max-width: 70%;
+  }
+  .slide p {
+    font-size: 1.8rem;
+  }
+  .dot-wrapper {
+    padding: 0.8rem;
+  }
+  .dot {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    max-width: 90%;
+  }
+  .slide p {
+    font-size: 1.6rem;
+  }
+  .dot-wrapper {
+    padding: 0.6rem;
+  }
+  .dot {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
